@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import myLogin from '@/components/myLogin'
 import myHome from '@/components/myHome'
 import Welcome from '@/components/Welcome'
+import Users from '../components/user/Users'
 Vue.use(Router)
 
 const router = new Router({
@@ -18,6 +19,10 @@ const router = new Router({
         {
           path: '/welcome',
           component: Welcome
+        },
+        {
+          path: '/users',
+          component: Users
         }
       ]},
     {

@@ -6,9 +6,10 @@ import router from './router'
 import './assets/rest.css'
 import './assets/global.css'
 import axios from 'axios'
-import ElementUI, {Message} from 'element-ui'
+import ElementUI, {Message, MessageBox} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
+Vue.prototype.$confirm = MessageBox.confirm
 Vue.use(ElementUI)
 Vue.prototype.$http = axios
 Vue.prototype.$message = Message

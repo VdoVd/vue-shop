@@ -30,13 +30,13 @@ export default {
     return {
       loginForm: {
         username: 'zsf',
-        password: '123'
+        password: '123456'
       },
 
       loginRules: {
         username: [
           { required: true, message: '请输入登陆名称', trigger: 'blur' },
-          { min: 3, max: 10, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+          { min: 3, max: 10, message: '长度在 3 到 20 个字符', trigger: 'blur' }
         ],
         password: [
           { required: true, message: '请输入密码', trigger: 'blur' },

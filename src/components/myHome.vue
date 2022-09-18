@@ -82,11 +82,11 @@ export default {
       console.log(res)
     },
     // 点击按钮，切换菜单的折叠与展开
-    toggleCollapse() {
+    toggleCollapse () {
       this.isCollapse = !this.isCollapse
     },
     // 保存链接的激活状态
-    saveNavState(activePath) {
+    saveNavState (activePath) {
       window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
     }
