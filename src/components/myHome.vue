@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       // 左侧菜单数据
       menulist: [],
@@ -145,4 +145,3 @@ export default {
   cursor: pointer;
 }
 </style>
-
