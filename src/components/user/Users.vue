@@ -98,7 +98,7 @@ export default {
   data () {
     var checkEmail = (rule, value, cb) => {
       const regEmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/
-      if (regEmail.test(value)){
+      if (regEmail.test(value)) {
         return cb()
       }
       cb(new Error('请输入合法的邮箱'))
@@ -106,7 +106,7 @@ export default {
 
     var checkMobile = (rule, value, cb) => {
       const regMobile = /^(0|86|17951)?(13[0-9]|15[0123456789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
-      if (regMobile.test(value)){
+      if (regMobile.test(value)) {
         return cb()
       }
       cb(new Error('请输入合法的手机号'))
@@ -210,7 +210,7 @@ export default {
       this.editForm = res.data
       this.editDialogVisible = true
     },
-    //修改用户关闭对话框事件
+    // 修改用户关闭对话框事件
     editDialogClosed () {
       this.$refs.editFormRef.resetFields()
     },
@@ -239,13 +239,13 @@ export default {
       })
     },
     async removeUserById (id) {
-     const confirmResult = await this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
+      const confirmResult = await this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
       }).catch(err => err)
 
-      if (confirmResult !== 'confirm'){
+      if (confirmResult !== 'confirm') {
         return this.$message.info('已取消删除')
       }
       const {data: res} = await this.$http.delete('users/' + id)
