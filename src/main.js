@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import './assets/rest.css'
 import './assets/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
 import axios from 'axios'
 import ElementUI, {Message, MessageBox} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -20,6 +21,7 @@ axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+Vue.component('tree-table', TreeTable)
 new Vue({
   el: '#app',
   router,
