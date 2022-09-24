@@ -9,6 +9,8 @@ import Rights from '../components/power/Rights'
 import Roles from '../components/power/Roles'
 import Cate from '../components/goods/Cate'
 import Params from '../components/goods/params'
+import List from '../components/goods/List'
+import Add from '../components/goods/Add'
 Vue.use(Router)
 
 const router = new Router({
@@ -20,6 +22,10 @@ const router = new Router({
       component: myHome,
       redirect: '/welcome',
       children: [
+        {
+          path: '/goods',
+          component: List
+        },
         {
           path: '/welcome',
           component: Welcome
@@ -35,6 +41,10 @@ const router = new Router({
         {
           path: '/params',
           component: Params
+        },
+        {
+          path: '/goods/add',
+          component: Add
         },
         {
           path: '/rights',
